@@ -56,7 +56,7 @@ static const NSString* kChatRoomId = @"chatroomId";
 
 #pragma mark - Life cycle
 - (void)extAppDidLoad:(AgoraExtAppContext *)context {
-    [self.view becomeFirstResponder];
+    //[self.view becomeFirstResponder];
     self.context = context;
     [self initViews];
     [self initData];

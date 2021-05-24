@@ -30,6 +30,8 @@
 
 - (void)loadSubviews
 {
+    self.backgroundColor = [UIColor colorWithRed:0.3 green:0.8 blue:0.2 alpha:0.2];
+    self.layer.cornerRadius = 8;
     _imageView = [[UIImageView alloc] init];
     self.imageView.image = [UIImage imageNamed:@"icon_gift"];
     [self addSubview:self.imageView];
@@ -46,6 +48,7 @@
 
 - (void)layoutSubviews
 {
+    self.backgroundColor = [UIColor colorWithRed:0.3 green:0.8 blue:0.2 alpha:0.2];
     CGFloat const imageWidth = 30.0f;
     [super layoutSubviews];
     self.imageView.frame = CGRectMake(0, 0, imageWidth, imageWidth);

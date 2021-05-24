@@ -383,10 +383,19 @@ static BOOL isSDKInited = NO;
         EMCmdMessageBody* body = (EMCmdMessageBody*)msg.body;
         if([body.action isEqualToString:@"DEL"]) {
             NSDictionary* ext = msg.ext;
-            NSString* msgId = [ext objectForKey:@"msgId"];
-            if(msgId.length > 0) {
+            id tmp = [ext objectForKey:@"msgId"];
+            NSString* msgIdToDel = @"";
+            if([tmp isKindOfClass:[NSString class]]) {
+                NSString* msgId = (NSString*)tmp;
+                msgIdToDel = (NSString*)tmp;
+            }
+            if([tmp isKindOfClass:[NSNumber class]]) {
+                NSNumber* num = (NSNumber*)tmp;
+                msgIdToDel = [NSString stringWithFormat:@"%ld",num.unsignedIntValue];
+            }
+            if(msgIdToDel.length > 0) {
                 if([self.delegate respondsToSelector:@selector(barrageMessageDidRecall:)]) {
-                    [self.delegate barrageMessageDidRecall:msgId];
+                    [self.delegate barrageMessageDidRecall:msgIdToDel];
                 }
             }
         }

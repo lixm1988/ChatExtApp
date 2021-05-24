@@ -46,7 +46,8 @@
     [self addSubview:self.imgView];
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
-        make.top.equalTo(self);
+        make.centerY.equalTo(self);
+        make.width.height.equalTo(@40);
     }];
     
     self.label = [[UILabel alloc] init];
@@ -54,7 +55,7 @@
     self.label.font = [UIFont systemFontOfSize:14];
     [self addSubview:self.label];
     [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.imgView.mas_bottom).offset(5);
+        make.top.equalTo(self).offset(5);
         make.centerX.equalTo(self);
         make.bottom.equalTo(self);
         make.height.greaterThanOrEqualTo(@14);
@@ -102,6 +103,10 @@
             model.original = emoji;
             [models1 addObject:model];
         }
+        EMEmoticonModel* delModel = [[EMEmoticonModel alloc] initWithType:EMEmotionTypeDel];
+        delModel.eId = @"del";
+        delModel.imgName = @"deleteEmoticon";
+        [models1 addObject:delModel];
         self.dataArray = [models1 copy];
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
@@ -116,15 +121,7 @@
         //    self.collectionView.userInteractionEnabled = YES;
         [self.collectionView registerClass:[EMEmoticonCell class] forCellWithReuseIdentifier:@"EMEmoticonCell"];
         [self addSubview:self.collectionView];
-        
-        self.deleteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.deleteBtn.backgroundColor = [UIColor clearColor];
-        [self.deleteBtn setImage:[UIImage imageNamedFromBundle:@"deleteEmoticon"] forState:UIControlStateNormal];
-        [self.deleteBtn setImage:[UIImage imageNamedFromBundle:@"deleteEmoticonDisable"] forState:UIControlStateDisabled];
-        [self.deleteBtn addTarget:self action:@selector(deleteAction) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:self.deleteBtn];
-        int itemWidth = (self.collectionView.bounds.size.width-self.itemMargin)/13-self.itemMargin;
-        self.deleteBtn.frame = CGRectMake(self.collectionView.bounds.origin.x + (self.itemMargin + itemWidth) * 12, self.bounds.size.height - 50, itemWidth, 40);
+
     }
     return self;
 }
@@ -159,7 +156,10 @@
 {
     EMEmoticonCell *cell = (EMEmoticonCell *)[collectionView cellForItemAtIndexPath:indexPath];
     if (self.delegate) {
-        [self.delegate emojiItemDidClicked:cell.model.name];
+        if(cell.model.type == EMEmotionTypeEmoji)
+            [self.delegate emojiItemDidClicked:cell.model.name];
+        if(cell.model.type == EMEmotionTypeDel)
+            [self.delegate emojiDidDelete];
     }
 }
 
