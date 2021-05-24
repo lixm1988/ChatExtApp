@@ -11,31 +11,13 @@
 		C075AE172658F091007AF136 /* EmojiKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C075AE132658F091007AF136 /* EmojiKeyboardView.m */; };
 		C075AE182658F091007AF136 /* EMEmojiHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C075AE142658F091007AF136 /* EMEmojiHelper.h */; };
 		C075AE192658F091007AF136 /* EmojiKeyboardView.h in Headers */ = {isa = PBXBuildFile; fileRef = C075AE152658F091007AF136 /* EmojiKeyboardView.h */; };
-		C0F4F40B265696DB00070C17 /* ChatManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F4F3F6265696DA00070C17 /* ChatManager.h */; };
-		C0F4F40C265696DB00070C17 /* ChatManager+SendGift.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F4F3F7265696DA00070C17 /* ChatManager+SendGift.m */; };
-		C0F4F40E265696DB00070C17 /* ChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F4F3F9265696DA00070C17 /* ChatManager.m */; };
-		C0F4F410265696DB00070C17 /* ChatManager+SendGift.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F4F3FB265696DA00070C17 /* ChatManager+SendGift.h */; };
-		C0F4F411265696DB00070C17 /* ChatExtApp.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F4F3FC265696DA00070C17 /* ChatExtApp.m */; };
-		C0F4F412265696DB00070C17 /* ChatExtAppDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F4F3FD265696DA00070C17 /* ChatExtAppDefine.h */; };
+		C0942E52265BC9C200B88ED1 /* ChatExtApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0942E51265BC9C200B88ED1 /* ChatExtApp.bundle */; };
 		C0F4F413265696DB00070C17 /* GiftView.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F4F3FF265696DA00070C17 /* GiftView.h */; };
 		C0F4F414265696DB00070C17 /* GiftCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F4F400265696DA00070C17 /* GiftCellView.m */; };
 		C0F4F415265696DB00070C17 /* GiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F4F401265696DA00070C17 /* GiftView.m */; };
 		C0F4F416265696DB00070C17 /* GiftCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F4F402265696DA00070C17 /* GiftCellView.h */; };
-		C0F4F417265696DB00070C17 /* ChatExtApp.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F4F403265696DA00070C17 /* ChatExtApp.h */; };
-		C0F4F418265696DB00070C17 /* ChatUserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F4F404265696DA00070C17 /* ChatUserConfig.m */; };
 		C0F4F41B265696DB00070C17 /* AvatarBarrageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F4F408265696DB00070C17 /* AvatarBarrageView.h */; };
 		C0F4F41C265696DB00070C17 /* AvatarBarrageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F4F409265696DB00070C17 /* AvatarBarrageView.m */; };
-		C0F4F41D265696DB00070C17 /* ChatUserConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F4F40A265696DB00070C17 /* ChatUserConfig.h */; };
-		C0F4F42A265696E400070C17 /* icon_emoji@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F4F420265696E400070C17 /* icon_emoji@2x.png */; };
-		C0F4F42B265696E400070C17 /* icon_keyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F4F421265696E400070C17 /* icon_keyboard@2x.png */; };
-		C0F4F42C265696E400070C17 /* icon_keyboard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F4F422265696E400070C17 /* icon_keyboard@3x.png */; };
-		C0F4F42D265696E400070C17 /* icon_emoji@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F4F423265696E400070C17 /* icon_emoji@3x.png */; };
-		C0F4F42E265696E400070C17 /* deleteEmoticonDisable@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F4F424265696E400070C17 /* deleteEmoticonDisable@3x.png */; };
-		C0F4F42F265696E400070C17 /* deleteEmoticon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F4F425265696E400070C17 /* deleteEmoticon@2x.png */; };
-		C0F4F430265696E400070C17 /* icon_gift@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F4F426265696E400070C17 /* icon_gift@2x.png */; };
-		C0F4F431265696E400070C17 /* icon_gift@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F4F427265696E400070C17 /* icon_gift@3x.png */; };
-		C0F4F432265696E400070C17 /* deleteEmoticon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F4F428265696E400070C17 /* deleteEmoticon@3x.png */; };
-		C0F4F433265696E400070C17 /* deleteEmoticonDisable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0F4F429265696E400070C17 /* deleteEmoticonDisable@2x.png */; };
 		E14DA1853277CA1D1BC59E2A /* Pods_ChatExtApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB5C6FD3A0DE8457C9FE943 /* Pods_ChatExtApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,33 +27,26 @@
 		C075AE132658F091007AF136 /* EmojiKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiKeyboardView.m; sourceTree = "<group>"; };
 		C075AE142658F091007AF136 /* EMEmojiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMEmojiHelper.h; sourceTree = "<group>"; };
 		C075AE152658F091007AF136 /* EmojiKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiKeyboardView.h; sourceTree = "<group>"; };
+		C0942E51265BC9C200B88ED1 /* ChatExtApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatExtApp.bundle; sourceTree = "<group>"; };
+		C0942E55265BC9D000B88ED1 /* ChatExtApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatExtApp.m; sourceTree = "<group>"; };
+		C0942E56265BC9D000B88ED1 /* ChatManager+SendGift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatManager+SendGift.h"; sourceTree = "<group>"; };
+		C0942E57265BC9D000B88ED1 /* ChatUserConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatUserConfig.h; sourceTree = "<group>"; };
+		C0942E58265BC9D000B88ED1 /* ChatExtAppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatExtAppDefine.h; sourceTree = "<group>"; };
+		C0942E59265BC9D000B88ED1 /* ChatManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatManager.h; sourceTree = "<group>"; };
+		C0942E5A265BC9D000B88ED1 /* ChatManager+SendGift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ChatManager+SendGift.m"; sourceTree = "<group>"; };
+		C0942E5B265BC9D000B88ED1 /* ChatExtApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatExtApp.h; sourceTree = "<group>"; };
+		C0942E5C265BC9D000B88ED1 /* ChatUserConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatUserConfig.m; sourceTree = "<group>"; };
+		C0942E5D265BC9D000B88ED1 /* ChatManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatManager.m; sourceTree = "<group>"; };
+		C0942E5F265BC9D000B88ED1 /* UIImage+ChatExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChatExt.h"; sourceTree = "<group>"; };
+		C0942E60265BC9D000B88ED1 /* UIImage+ChatExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChatExt.m"; sourceTree = "<group>"; };
 		C0F4F3E82656962B00070C17 /* ChatExtApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChatExtApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F4F3EC2656962B00070C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0F4F3F6265696DA00070C17 /* ChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatManager.h; sourceTree = "<group>"; };
-		C0F4F3F7265696DA00070C17 /* ChatManager+SendGift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatManager+SendGift.m"; sourceTree = "<group>"; };
-		C0F4F3F9265696DA00070C17 /* ChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatManager.m; sourceTree = "<group>"; };
-		C0F4F3FB265696DA00070C17 /* ChatManager+SendGift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatManager+SendGift.h"; sourceTree = "<group>"; };
-		C0F4F3FC265696DA00070C17 /* ChatExtApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatExtApp.m; sourceTree = "<group>"; };
-		C0F4F3FD265696DA00070C17 /* ChatExtAppDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatExtAppDefine.h; sourceTree = "<group>"; };
 		C0F4F3FF265696DA00070C17 /* GiftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftView.h; sourceTree = "<group>"; };
 		C0F4F400265696DA00070C17 /* GiftCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCellView.m; sourceTree = "<group>"; };
 		C0F4F401265696DA00070C17 /* GiftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftView.m; sourceTree = "<group>"; };
 		C0F4F402265696DA00070C17 /* GiftCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCellView.h; sourceTree = "<group>"; };
-		C0F4F403265696DA00070C17 /* ChatExtApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatExtApp.h; sourceTree = "<group>"; };
-		C0F4F404265696DA00070C17 /* ChatUserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUserConfig.m; sourceTree = "<group>"; };
 		C0F4F408265696DB00070C17 /* AvatarBarrageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarBarrageView.h; sourceTree = "<group>"; };
 		C0F4F409265696DB00070C17 /* AvatarBarrageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarBarrageView.m; sourceTree = "<group>"; };
-		C0F4F40A265696DB00070C17 /* ChatUserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatUserConfig.h; sourceTree = "<group>"; };
-		C0F4F420265696E400070C17 /* icon_emoji@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_emoji@2x.png"; sourceTree = "<group>"; };
-		C0F4F421265696E400070C17 /* icon_keyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_keyboard@2x.png"; sourceTree = "<group>"; };
-		C0F4F422265696E400070C17 /* icon_keyboard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_keyboard@3x.png"; sourceTree = "<group>"; };
-		C0F4F423265696E400070C17 /* icon_emoji@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_emoji@3x.png"; sourceTree = "<group>"; };
-		C0F4F424265696E400070C17 /* deleteEmoticonDisable@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteEmoticonDisable@3x.png"; sourceTree = "<group>"; };
-		C0F4F425265696E400070C17 /* deleteEmoticon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteEmoticon@2x.png"; sourceTree = "<group>"; };
-		C0F4F426265696E400070C17 /* icon_gift@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_gift@2x.png"; sourceTree = "<group>"; };
-		C0F4F427265696E400070C17 /* icon_gift@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_gift@3x.png"; sourceTree = "<group>"; };
-		C0F4F428265696E400070C17 /* deleteEmoticon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteEmoticon@3x.png"; sourceTree = "<group>"; };
-		C0F4F429265696E400070C17 /* deleteEmoticonDisable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteEmoticonDisable@2x.png"; sourceTree = "<group>"; };
 		C129F043070260637A0ABAC7 /* Pods-ChatExtApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatExtApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatExtApp/Pods-ChatExtApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FBB5C6FD3A0DE8457C9FE943 /* Pods_ChatExtApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatExtApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,6 +91,31 @@
 			path = EmojiKeyBoard;
 			sourceTree = "<group>";
 		};
+		C0942E54265BC9D000B88ED1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C0942E55265BC9D000B88ED1 /* ChatExtApp.m */,
+				C0942E56265BC9D000B88ED1 /* ChatManager+SendGift.h */,
+				C0942E57265BC9D000B88ED1 /* ChatUserConfig.h */,
+				C0942E58265BC9D000B88ED1 /* ChatExtAppDefine.h */,
+				C0942E59265BC9D000B88ED1 /* ChatManager.h */,
+				C0942E5A265BC9D000B88ED1 /* ChatManager+SendGift.m */,
+				C0942E5B265BC9D000B88ED1 /* ChatExtApp.h */,
+				C0942E5C265BC9D000B88ED1 /* ChatUserConfig.m */,
+				C0942E5D265BC9D000B88ED1 /* ChatManager.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C0942E5E265BC9D000B88ED1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C0942E5F265BC9D000B88ED1 /* UIImage+ChatExt.h */,
+				C0942E60265BC9D000B88ED1 /* UIImage+ChatExt.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C0F4F3DE2656962B00070C17 = {
 			isa = PBXGroup;
 			children = (
@@ -137,18 +137,11 @@
 		C0F4F3EA2656962B00070C17 /* ChatExtApp */ = {
 			isa = PBXGroup;
 			children = (
-				C0F4F41F265696E400070C17 /* Resource */,
+				C0942E51265BC9C200B88ED1 /* ChatExtApp.bundle */,
+				C0942E54265BC9D000B88ED1 /* Main */,
+				C0942E5E265BC9D000B88ED1 /* Utils */,
 				C075AE112658F091007AF136 /* EmojiKeyBoard */,
 				C0F4F407265696DB00070C17 /* Barrage */,
-				C0F4F403265696DA00070C17 /* ChatExtApp.h */,
-				C0F4F3FC265696DA00070C17 /* ChatExtApp.m */,
-				C0F4F3FD265696DA00070C17 /* ChatExtAppDefine.h */,
-				C0F4F3F6265696DA00070C17 /* ChatManager.h */,
-				C0F4F3F9265696DA00070C17 /* ChatManager.m */,
-				C0F4F3FB265696DA00070C17 /* ChatManager+SendGift.h */,
-				C0F4F3F7265696DA00070C17 /* ChatManager+SendGift.m */,
-				C0F4F40A265696DB00070C17 /* ChatUserConfig.h */,
-				C0F4F404265696DA00070C17 /* ChatUserConfig.m */,
 				C0F4F3FE265696DA00070C17 /* Gift */,
 				C0F4F3EC2656962B00070C17 /* Info.plist */,
 			);
@@ -175,23 +168,6 @@
 			path = Barrage;
 			sourceTree = "<group>";
 		};
-		C0F4F41F265696E400070C17 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				C0F4F420265696E400070C17 /* icon_emoji@2x.png */,
-				C0F4F421265696E400070C17 /* icon_keyboard@2x.png */,
-				C0F4F422265696E400070C17 /* icon_keyboard@3x.png */,
-				C0F4F423265696E400070C17 /* icon_emoji@3x.png */,
-				C0F4F424265696E400070C17 /* deleteEmoticonDisable@3x.png */,
-				C0F4F425265696E400070C17 /* deleteEmoticon@2x.png */,
-				C0F4F426265696E400070C17 /* icon_gift@2x.png */,
-				C0F4F427265696E400070C17 /* icon_gift@3x.png */,
-				C0F4F428265696E400070C17 /* deleteEmoticon@3x.png */,
-				C0F4F429265696E400070C17 /* deleteEmoticonDisable@2x.png */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -199,13 +175,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F4F410265696DB00070C17 /* ChatManager+SendGift.h in Headers */,
 				C075AE192658F091007AF136 /* EmojiKeyboardView.h in Headers */,
 				C0F4F413265696DB00070C17 /* GiftView.h in Headers */,
-				C0F4F412265696DB00070C17 /* ChatExtAppDefine.h in Headers */,
-				C0F4F40B265696DB00070C17 /* ChatManager.h in Headers */,
-				C0F4F417265696DB00070C17 /* ChatExtApp.h in Headers */,
-				C0F4F41D265696DB00070C17 /* ChatUserConfig.h in Headers */,
 				C075AE182658F091007AF136 /* EMEmojiHelper.h in Headers */,
 				C0F4F41B265696DB00070C17 /* AvatarBarrageView.h in Headers */,
 				C0F4F416265696DB00070C17 /* GiftCellView.h in Headers */,
@@ -270,16 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F4F431265696E400070C17 /* icon_gift@3x.png in Resources */,
-				C0F4F42C265696E400070C17 /* icon_keyboard@3x.png in Resources */,
-				C0F4F430265696E400070C17 /* icon_gift@2x.png in Resources */,
-				C0F4F42F265696E400070C17 /* deleteEmoticon@2x.png in Resources */,
-				C0F4F42B265696E400070C17 /* icon_keyboard@2x.png in Resources */,
-				C0F4F42A265696E400070C17 /* icon_emoji@2x.png in Resources */,
-				C0F4F42E265696E400070C17 /* deleteEmoticonDisable@3x.png in Resources */,
-				C0F4F432265696E400070C17 /* deleteEmoticon@3x.png in Resources */,
-				C0F4F433265696E400070C17 /* deleteEmoticonDisable@2x.png in Resources */,
-				C0F4F42D265696E400070C17 /* icon_emoji@3x.png in Resources */,
+				C0942E52265BC9C200B88ED1 /* ChatExtApp.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,13 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C075AE162658F091007AF136 /* EMEmojiHelper.m in Sources */,
-				C0F4F411265696DB00070C17 /* ChatExtApp.m in Sources */,
 				C0F4F415265696DB00070C17 /* GiftView.m in Sources */,
 				C0F4F41C265696DB00070C17 /* AvatarBarrageView.m in Sources */,
 				C075AE172658F091007AF136 /* EmojiKeyboardView.m in Sources */,
-				C0F4F40C265696DB00070C17 /* ChatManager+SendGift.m in Sources */,
-				C0F4F418265696DB00070C17 /* ChatUserConfig.m in Sources */,
-				C0F4F40E265696DB00070C17 /* ChatManager.m in Sources */,
 				C0F4F414265696DB00070C17 /* GiftCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
