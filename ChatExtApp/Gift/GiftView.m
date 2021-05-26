@@ -7,9 +7,13 @@
 //
 
 #import "GiftView.h"
+#import "TrianglePoputView.h"
+#import "UIImage+ChatExt.h"
 
 @interface GiftView ()<GiftCellViewDelegate>
 @property (nonatomic,strong) GiftCellView* selectedGift;
+@property (nonatomic,strong) TrianglePoputView* popView;
+@property (nonatomic,strong) UITapGestureRecognizer *tap;
 @end
 
 @implementation GiftView
@@ -50,10 +54,16 @@
     getCreditsText.textColor = [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0];
     [self addSubview:getCreditsText];
     
+    UIButton* aboutButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [aboutButton setImage:[UIImage imageNamedFromBundle:@"icon_solution"] forState:UIControlStateNormal];
+    aboutButton.frame = CGRectMake(self.bounds.size.width/2+35+2, 8, 20, 20);
+    [self addSubview:aboutButton];
+    [aboutButton addTarget:self action:@selector(aboutAction) forControlEvents:UIControlEventTouchUpInside];
+    
     UIButton* closeButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [closeButton setTitle:@"X" forState:UIControlStateNormal];
     [closeButton.titleLabel setFont:[UIFont systemFontOfSize:20] ];
-    closeButton.frame = CGRectMake(self.bounds.size.width - 40, 12, 18, 18);
+    closeButton.frame = CGRectMake(self.bounds.size.width - 40, 12, 28, 28);
     [closeButton setTitleColor:[UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0] forState:UIControlStateNormal];
     [self addSubview:closeButton];
     [closeButton addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
@@ -92,11 +102,30 @@
     rocketGift.delegate = self;
     [self addSubview:rocketGift];
     
+    self.popView = [[TrianglePoputView alloc] initWithFrame:CGRectMake(self.bounds.size.width/2-170, 30, 343, 114)];
+    [self addSubview:self.popView];
+    self.popView.hidden = YES;
+    
+    self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(giftTapAction:)];
+    [self addGestureRecognizer:self.tap];
 }
 
 - (void)closeAction
 {
     self.hidden = YES;
+}
+
+- (void)aboutAction
+{
+    self.popView.hidden = !self.popView.hidden;
+}
+
+- (void)giftTapAction:(UITapGestureRecognizer *)aTap
+{
+    if (aTap.state == UIGestureRecognizerStateEnded) {
+
+        self.popView.hidden = YES;
+    }
 }
 
 #pragma mark - GiftCellViewDelegate

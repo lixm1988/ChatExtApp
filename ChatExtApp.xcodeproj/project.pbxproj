@@ -11,6 +11,8 @@
 		C075AE172658F091007AF136 /* EmojiKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C075AE132658F091007AF136 /* EmojiKeyboardView.m */; };
 		C075AE182658F091007AF136 /* EMEmojiHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C075AE142658F091007AF136 /* EMEmojiHelper.h */; };
 		C075AE192658F091007AF136 /* EmojiKeyboardView.h in Headers */ = {isa = PBXBuildFile; fileRef = C075AE152658F091007AF136 /* EmojiKeyboardView.h */; };
+		C082C647265E727D009EE249 /* TrianglePoputView.h in Headers */ = {isa = PBXBuildFile; fileRef = C082C645265E727D009EE249 /* TrianglePoputView.h */; };
+		C082C648265E727D009EE249 /* TrianglePoputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C082C646265E727D009EE249 /* TrianglePoputView.m */; };
 		C0942E52265BC9C200B88ED1 /* ChatExtApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0942E51265BC9C200B88ED1 /* ChatExtApp.bundle */; };
 		C0F4F413265696DB00070C17 /* GiftView.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F4F3FF265696DA00070C17 /* GiftView.h */; };
 		C0F4F414265696DB00070C17 /* GiftCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F4F400265696DA00070C17 /* GiftCellView.m */; };
@@ -27,6 +29,8 @@
 		C075AE132658F091007AF136 /* EmojiKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiKeyboardView.m; sourceTree = "<group>"; };
 		C075AE142658F091007AF136 /* EMEmojiHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMEmojiHelper.h; sourceTree = "<group>"; };
 		C075AE152658F091007AF136 /* EmojiKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiKeyboardView.h; sourceTree = "<group>"; };
+		C082C645265E727D009EE249 /* TrianglePoputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrianglePoputView.h; sourceTree = "<group>"; };
+		C082C646265E727D009EE249 /* TrianglePoputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrianglePoputView.m; sourceTree = "<group>"; };
 		C0942E51265BC9C200B88ED1 /* ChatExtApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatExtApp.bundle; sourceTree = "<group>"; };
 		C0942E55265BC9D000B88ED1 /* ChatExtApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatExtApp.m; sourceTree = "<group>"; };
 		C0942E56265BC9D000B88ED1 /* ChatManager+SendGift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatManager+SendGift.h"; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				C0F4F400265696DA00070C17 /* GiftCellView.m */,
 				C0F4F401265696DA00070C17 /* GiftView.m */,
 				C0F4F402265696DA00070C17 /* GiftCellView.h */,
+				C082C645265E727D009EE249 /* TrianglePoputView.h */,
+				C082C646265E727D009EE249 /* TrianglePoputView.m */,
 			);
 			path = Gift;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 				C0F4F413265696DB00070C17 /* GiftView.h in Headers */,
 				C075AE182658F091007AF136 /* EMEmojiHelper.h in Headers */,
 				C0F4F41B265696DB00070C17 /* AvatarBarrageView.h in Headers */,
+				C082C647265E727D009EE249 /* TrianglePoputView.h in Headers */,
 				C0F4F416265696DB00070C17 /* GiftCellView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C075AE162658F091007AF136 /* EMEmojiHelper.m in Sources */,
+				C082C648265E727D009EE249 /* TrianglePoputView.m in Sources */,
 				C0F4F415265696DB00070C17 /* GiftView.m in Sources */,
 				C0F4F41C265696DB00070C17 /* AvatarBarrageView.m in Sources */,
 				C075AE172658F091007AF136 /* EmojiKeyboardView.m in Sources */,
