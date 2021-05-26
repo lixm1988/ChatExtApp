@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ChatUserConfig.h"
+#import "ChatExtAppDefine.h"
 #import <HyphenateChat/HyphenateChat.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -35,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)barrageMessageDidRecall:(NSString*)aMessageId;
 // 禁言状态改变
 - (void)mutedStateDidChanged;
+// 状态发生改变
+- (void)roomStateDidChanged:(ChatRoomState)aState;
 
 @end
 
@@ -62,6 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSString* chatRoomId;
 @property (nonatomic,strong) NSString* chatroomAnnouncement;
 @property (nonatomic,weak) id<ChatManagerDelegate> delegate;
+@property (nonatomic) ChatRoomState state;
 @end
 
 NS_ASSUME_NONNULL_END

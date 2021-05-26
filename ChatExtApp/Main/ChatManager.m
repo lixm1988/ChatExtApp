@@ -7,7 +7,7 @@
 //
 
 #import "ChatManager.h"
-#import "ChatExtAppDefine.h"
+
 const static NSString* kMsgType = @"msgtype";
 const static NSString* kAvatarUrl = @"avatarUrl";
 const static NSString* kNickName = @"nickName";
@@ -65,6 +65,11 @@ static BOOL isSDKInited = NO;
     return @"easemob-demo#cloudclass";
 }
 
+- (NSString*)password
+{
+    return @"123456";
+}
+
 - (instancetype)initWithUserConfig:(ChatUserConfig*)aUserConfig chatRoomId:(NSString*)aChatRoomId
 {
     self = [super init];
@@ -95,20 +100,24 @@ static BOOL isSDKInited = NO;
     __weak typeof(self) weakself = self;
     if(isSDKInited && self.user.username.length > 0) {
         NSString* lowercaseName = [self.user.username lowercaseString];
-        [[EMClient sharedClient] loginWithUsername:lowercaseName password:@"123456" completion:^(NSString *aUsername, EMError *aError) {
+        weakself.state = ChatRoomStateLogin;
+        
+        [[EMClient sharedClient] loginWithUsername:lowercaseName password:weakself.password completion:^(NSString *aUsername, EMError *aError) {
             if(!aError) {
                 weakself.isLogin = YES;
             }else{
                 if(aError.code == EMErrorUserNotFound) {
-                    [[EMClient sharedClient] registerWithUsername:lowercaseName password:@"123456" completion:^(NSString *aUsername, EMError *aError) {
+                    [[EMClient sharedClient] registerWithUsername:lowercaseName password:weakself.password completion:^(NSString *aUsername, EMError *aError) {
                         if(!aError) {
-                            [[EMClient sharedClient] loginWithUsername:lowercaseName password:@"123456" completion:^(NSString *aUsername, EMError *aError) {
+                            [[EMClient sharedClient] loginWithUsername:lowercaseName password:weakself.password completion:^(NSString *aUsername, EMError *aError) {
                                 if(!aError) {
                                     weakself.isLogin = YES;
                                 }
                             }];
                         }
                     }];
+                }else{
+                    weakself.state = ChatRoomStateLoginFailed;
                 }
             }
         }];
@@ -130,10 +139,14 @@ static BOOL isSDKInited = NO;
     if(_isLogin) {
         if(self.chatRoomId.length > 0) {
             __weak typeof(self) weakself = self;
+            weakself.state = ChatRoomStateJoining;
             [[EMClient sharedClient].roomManager joinChatroom:self.chatRoomId completion:^(EMChatroom *aChatroom, EMError *aError) {
                 if(!aError) {
                     self.chatRoom = aChatroom;
+                    weakself.state = ChatRoomStateJoined;
                     [weakself fetchChatroomData];
+                }else{
+                    weakself.state = ChatRoomStateJoinFail;
                 }
             }];
         }
@@ -202,6 +215,14 @@ static BOOL isSDKInited = NO;
         _askAndAnswerMsgs = [NSMutableArray<EMMessage*> array];
     }
     return _askAndAnswerMsgs;
+}
+
+- (void)setState:(ChatRoomState)state
+{
+    _state = state;
+    if(self.delegate) {
+        [self.delegate roomStateDidChanged:state];
+    }
 }
 
 - (NSLock*)dataLock
@@ -290,7 +311,7 @@ static BOOL isSDKInited = NO;
 // 更新头像
 - (void)updateAvatar:(NSString*)avatarUrl
 {
-    self.user.avatarurl = avatarUrl;
+    self.user.avatarurl = [avatarUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
     if(avatarUrl.length > 0) {
         [[[EMClient sharedClient] userInfoManager] updateOwnUserInfo:avatarUrl withType:EMUserInfoTypeAvatarURL completion:nil];
     }
@@ -298,7 +319,7 @@ static BOOL isSDKInited = NO;
 // 更新昵称
 - (void)updateNickName:(NSString*)nickName
 {
-    self.user.nickname = nickName;
+    self.user.nickname = [nickName stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
     if(nickName.length > 0){
         [[[EMClient sharedClient] userInfoManager] updateOwnUserInfo:nickName withType:EMUserInfoTypeNickName completion:nil];
     }

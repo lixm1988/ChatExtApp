@@ -15,5 +15,14 @@ typedef NS_ENUM(NSUInteger, ChatMsgType) {
     ChatMsgAnswer,
 };
 
+typedef NS_ENUM(NSUInteger, ChatRoomState) {
+    ChatRoomStateLogin = 0,
+    ChatRoomStateLogined,
+    ChatRoomStateLoginFailed,
+    ChatRoomStateJoining,
+    ChatRoomStateJoined,
+    ChatRoomStateJoinFail,
+};
+
 
 #endif /* ChatExtAppDefine_h */

@@ -371,6 +371,35 @@ static const NSString* kChatRoomId = @"chatroomId";
     }
 }
 
+- (void)roomStateDidChanged:(ChatRoomState)aState
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        switch (aState) {
+            case ChatRoomStateLogin:
+                self.inputField.placeholder = @"正在登录";
+                break;
+            case ChatRoomStateLoginFailed:
+                self.inputField.placeholder = @"登录失败";
+                break;
+            case ChatRoomStateLogined:
+                self.inputField.placeholder = @"登录成功";
+                break;
+            case ChatRoomStateJoining:
+                self.inputField.placeholder = @"正在加入房间";
+                break;
+            case ChatRoomStateJoined:
+                self.inputField.placeholder = @"发个弹幕吧";
+                break;
+            case ChatRoomStateJoinFail:
+                self.inputField.placeholder = @"加入房间失败";
+                break;
+            default:
+                break;
+        }
+    });
+    
+}
+
 #pragma mark - GiftViewDelegate
 - (void)sendGift:(GiftCellView*)giftView
 {
