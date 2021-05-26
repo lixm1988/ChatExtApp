@@ -359,6 +359,10 @@ static BOOL isSDKInited = NO;
                 if([customBody.event isEqualToString:@"gift"]) {
                     NSDictionary* ext = customBody.customExt;
                     NSString* avatarUrl = [ext objectForKey:kAvatarUrl];
+                    if(avatarUrl.length == 0){
+                        NSDictionary* curExt = customBody.ext;
+                        avatarUrl = [curExt objectForKey:kAvatarUrl];
+                    }
                     NSString* des = [ext objectForKey:@"des"];
                     NSString* url = [ext objectForKey:@"url"];
                     [self.dataLock lock];

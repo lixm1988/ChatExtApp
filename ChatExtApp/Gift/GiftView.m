@@ -63,31 +63,32 @@
     [self addSubview:spliderView];
     
     int buttonwidth = self.bounds.size.width/8;
-    GiftCellView* flowerGift = [[GiftCellView alloc] initWithFrame:CGRectMake(0, 44, buttonwidth, 110) type:GiftTypeFlower];
+    int left = 30;
+    GiftCellView* flowerGift = [[GiftCellView alloc] initWithFrame:CGRectMake(0+left, 44, buttonwidth, 110) type:GiftTypeFlower];
     flowerGift.delegate = self;
     [self addSubview:flowerGift];
     
-    GiftCellView* heartGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth, 44, buttonwidth, 110) type:GiftTypeHeart];
+    GiftCellView* heartGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth+left, 44, buttonwidth, 110) type:GiftTypeHeart];
     heartGift.delegate = self;
     [self addSubview:heartGift];
     
-    GiftCellView* drumsticksGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth * 2, 44, buttonwidth, 110) type:GiftTypeDrumsticks];
+    GiftCellView* drumsticksGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth * 2+left, 44, buttonwidth, 110) type:GiftTypeDrumsticks];
     drumsticksGift.delegate = self;
     [self addSubview:drumsticksGift];
     
-    GiftCellView* colaGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth * 3, 44, buttonwidth, 110) type:GifttypeCola];
+    GiftCellView* colaGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth * 3+left, 44, buttonwidth, 110) type:GifttypeCola];
     colaGift.delegate = self;
     [self addSubview:colaGift];
     
-    GiftCellView* sugerGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth * 4, 44, buttonwidth, 110) type:GiftTypeSuger];
+    GiftCellView* sugerGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth * 4+left, 44, buttonwidth, 110) type:GiftTypeSuger];
     sugerGift.delegate = self;
     [self addSubview:sugerGift];
     
-    GiftCellView* backBloodGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth * 5, 44, buttonwidth, 110) type:GiftTypeBackBlood];
+    GiftCellView* backBloodGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth * 5+left, 44, buttonwidth, 110) type:GiftTypeBackBlood];
     backBloodGift.delegate = self;
     [self addSubview:backBloodGift];
     
-    GiftCellView* rocketGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth * 6, 44, buttonwidth, 110) type:GiftTypeRocket];
+    GiftCellView* rocketGift = [[GiftCellView alloc] initWithFrame:CGRectMake(buttonwidth * 6+left, 44, buttonwidth, 110) type:GiftTypeRocket];
     rocketGift.delegate = self;
     [self addSubview:rocketGift];
     

@@ -45,25 +45,29 @@
 - (void)setupSubViews
 {
     self.giftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.giftButton.frame = CGRectMake(self.bounds.size.width/2-25, 10, 50, 50);
+    self.giftButton.frame = CGRectMake(self.bounds.size.width/2-25, 10, 48, 48);
     [self addSubview:self.giftButton];
     [self.giftButton addTarget:self action:@selector(selectGiftAction) forControlEvents:UIControlEventTouchUpInside];
     
     self.giftDescription = [[UILabel alloc] initWithFrame:CGRectMake(0, 60, self.bounds.size.width, 28)];
     self.giftDescription.textAlignment = NSTextAlignmentCenter;
+    self.giftDescription.textColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0];
+    [self.giftDescription setFont:[UIFont systemFontOfSize:13]];
     [self addSubview:self.giftDescription];
     
     self.creditLable = [[UILabel alloc] initWithFrame:CGRectMake(0, 90, self.bounds.size.width, 18)];
     self.creditLable.textAlignment = NSTextAlignmentCenter;
-    [self.creditLable setFont:[UIFont systemFontOfSize:10]];
+    self.creditLable.textColor = [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0];
+    [self.creditLable setFont:[UIFont systemFontOfSize:11]];
     [self addSubview:self.creditLable];
     
     self.sendButton = [UIButton buttonWithType:UIButtonTypeSystem];
     self.sendButton.frame = CGRectMake(self.bounds.size.width/2-25, 80, 50, 30);
     [self.sendButton setTitle:@"赠送" forState:UIControlStateNormal];
-    [self.sendButton setBackgroundColor:[UIColor colorWithRed:0.21 green:0.48 blue:0.96 alpha:1.0]];
+    [self.sendButton setBackgroundColor:[UIColor colorWithRed:0/255.0 green:152/255.0 blue:255/255.0 alpha:1.0]];
     [self.sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self addSubview:self.sendButton];
+    self.sendButton.layer.cornerRadius = 3;
     [self.sendButton addTarget:self action:@selector(sendGiftAction) forControlEvents:UIControlEventTouchUpInside];
     
     self.backView = [[UIView alloc] initWithFrame:CGRectMake(self.bounds.size.width/2-30, 10, 60, 70)];
@@ -126,7 +130,7 @@
 
 + (NSArray<NSString*>*)giftDescriptions
 {
-    return @[@"呐～这朵鲜花送给你",@"老师好棒，我是你的铁粉",@"讲的好，加鸡腿",@"一起干了这杯82年的可乐",@"润喉糖",@"给老师回回血",@"神仙老师，浑身都是优点",];
+    return @[@"呐～这朵鲜花送给你",@"老师好棒，我是你的铁粉",@"讲的好，加鸡腿",@"一起干了这杯82年的可乐",@"老师辛苦了，润润喉",@"给老师回回血",@"神仙老师，浑身都是优点",];
 }
 + (NSArray<NSNumber*>*)giftCredits
 {

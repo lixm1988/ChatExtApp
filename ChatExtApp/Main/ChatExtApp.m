@@ -22,8 +22,8 @@ static const NSString* kChatRoomId = @"chatroomId";
 #define CONTAINVIEW_HEIGHT 50
 #define SENDBUTTON_HEIGHT 30
 #define SENDBUTTON_WIDTH 40
-#define INPUT_WIDTH 190
-#define GIFTBUTTON_WIDTH 40
+#define INPUT_WIDTH 120
+#define GIFTBUTTON_WIDTH 28
 #define EMOJIBUTTON_WIDTH 30
 
 @interface ChatExtApp () <ChatManagerDelegate,UITextFieldDelegate,BarrageRendererDelegate,GiftViewDelegate,EmojiKeyboardDelegate>
@@ -77,7 +77,7 @@ static const NSString* kChatRoomId = @"chatroomId";
     [self.view addSubview:self.containView];
     
     
-    self.inputField = [[UITextField alloc] initWithFrame:CGRectMake(self.containView.bounds.size.width-INPUT_WIDTH, 10, 150, CONTAINVIEW_HEIGHT-10)];
+    self.inputField = [[UITextField alloc] initWithFrame:CGRectMake(self.containView.bounds.size.width-INPUT_WIDTH - 20-GIFTBUTTON_WIDTH, 10, INPUT_WIDTH, CONTAINVIEW_HEIGHT-20)];
     self.inputField.placeholder = @"发个弹幕吧";
     self.inputField.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0];
     self.inputField.layer.cornerRadius = 15;
@@ -89,7 +89,8 @@ static const NSString* kChatRoomId = @"chatroomId";
     UIImage* image = [UIImage imageNamedFromBundle:@"icon_gift"];
     [self.giftButton setImage:image forState:UIControlStateNormal];
     [self.giftButton setImage:image forState:UIControlStateDisabled];
-    self.giftButton.frame = CGRectMake(self.containView.bounds.size.width-GIFTBUTTON_WIDTH, CONTAINVIEW_HEIGHT - GIFTBUTTON_WIDTH, GIFTBUTTON_WIDTH, GIFTBUTTON_WIDTH);
+    self.giftButton.frame = CGRectMake(self.containView.bounds.size.width-GIFTBUTTON_WIDTH, (CONTAINVIEW_HEIGHT - GIFTBUTTON_WIDTH)/2, GIFTBUTTON_WIDTH, GIFTBUTTON_WIDTH);
+    self.giftButton.contentMode = UIViewContentModeScaleAspectFit;
     [self.containView addSubview:self.giftButton];
     [self.giftButton addTarget:self action:@selector(sendGiftAction) forControlEvents:UIControlEventTouchUpInside];
     self.emojiButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -168,9 +169,9 @@ static const NSString* kChatRoomId = @"chatroomId";
 
 - (BarrageDescriptor *)buildBarrageDescriptor:(BarrageMsgInfo*)aInfo
 {
-    BarrageDescriptor * descriptor = [[BarrageDescriptor alloc]init];
+    BarrageDescriptor * descriptor = [[BarrageDescriptor alloc] init];
     
-    descriptor.params[@"speed"] = @70;
+    descriptor.params[@"speed"] = @(arc4random() % 30+30);
     descriptor.params[@"direction"] = @(BarrageWalkDirectionR2L);
     descriptor.params[@"side"] = @(BarrageWalkSideDefault);
     if(aInfo.isGift)
@@ -202,7 +203,7 @@ static const NSString* kChatRoomId = @"chatroomId";
 {
     if(!_chatManager) {
         ChatUserConfig* user = [[ChatUserConfig alloc] init];
-        user.username = [self.context.localUserInfo.userName lowercaseString];
+        user.username = [self.context.localUserInfo.userUuid lowercaseString];
         user.avatarurl = [self.context.properties objectForKey:kAvatarUrl];
         user.nickname = [self.context.properties objectForKey:kNickname];
         user.roomUuid = self.context.roomInfo.roomUuid;
@@ -303,7 +304,7 @@ static const NSString* kChatRoomId = @"chatroomId";
     CGFloat duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
     [UIView animateWithDuration:duration animations:^{
         self.containView.frame = CGRectMake(0, self.view.bounds.size.height - CONTAINVIEW_HEIGHT, self.view.bounds.size.width, CONTAINVIEW_HEIGHT);
-        self.inputField.frame = CGRectMake(self.containView.bounds.size.width-INPUT_WIDTH, 10, 150, CONTAINVIEW_HEIGHT - 10);
+        self.inputField.frame = CGRectMake(self.containView.bounds.size.width-INPUT_WIDTH-20-GIFTBUTTON_WIDTH, 10, INPUT_WIDTH, CONTAINVIEW_HEIGHT - 20);
         self.giftButton.hidden = NO;
         self.sendButton.hidden = YES;
         self.emojiButton.hidden = YES;
