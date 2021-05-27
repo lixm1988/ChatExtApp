@@ -52,7 +52,7 @@
     UILabel* lable3 = [[UILabel alloc] init];
     lable3.frame = CGRectMake(20, 80, self.bounds.size.width - 40, 20);
     lable3.font = [UIFont systemFontOfSize:11];
-    lable3.text = @"具体细则请访问  “ 学习中心 > 个人中心 ";
+    lable3.text = @"具体细则请访问  “ 学习中心 > 个人中心 “ ";
     lable3.textColor = [UIColor whiteColor];
     lable3.alpha = 0.8;
     [self addSubview:lable3];

@@ -62,8 +62,8 @@
     
     UIButton* closeButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [closeButton setTitle:@"X" forState:UIControlStateNormal];
-    [closeButton.titleLabel setFont:[UIFont systemFontOfSize:20] ];
-    closeButton.frame = CGRectMake(self.bounds.size.width - 40, 12, 28, 28);
+    [closeButton.titleLabel setFont:[UIFont systemFontOfSize:24] ];
+    closeButton.frame = CGRectMake(self.bounds.size.width - 40, 5, 28, 28);
     [closeButton setTitleColor:[UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0] forState:UIControlStateNormal];
     [self addSubview:closeButton];
     [closeButton addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];

@@ -62,7 +62,7 @@
     [self addSubview:self.creditLable];
     
     self.sendButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    self.sendButton.frame = CGRectMake(self.bounds.size.width/2-25, 80, 50, 30);
+    self.sendButton.frame = CGRectMake(0, 80, self.bounds.size.width, 30);
     [self.sendButton setTitle:@"赠送" forState:UIControlStateNormal];
     [self.sendButton setBackgroundColor:[UIColor colorWithRed:0/255.0 green:152/255.0 blue:255/255.0 alpha:1.0]];
     [self.sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -70,7 +70,7 @@
     self.sendButton.layer.cornerRadius = 3;
     [self.sendButton addTarget:self action:@selector(sendGiftAction) forControlEvents:UIControlEventTouchUpInside];
     
-    self.backView = [[UIView alloc] initWithFrame:CGRectMake(self.bounds.size.width/2-30, 10, 60, 70)];
+    self.backView = [[UIView alloc] initWithFrame:CGRectMake(0, 10, self.bounds.size.width, 70)];
     self.backView.backgroundColor = [UIColor grayColor];
     self.backView.alpha = 0.1;
     [self addSubview:self.backView];
