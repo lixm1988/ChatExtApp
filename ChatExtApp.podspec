@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '9.0'
     s.source_files = 'ChatExtApp/**/*.{h,m}'
     s.public_header_files = [
-      'ChatExtApp/ChatExtApp.h',
+      'ChatExtApp/Main/ChatExtApp.h',
     ]
     s.resources = 'ChatExtApp/ChatExtApp.bundle'
     s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES','EXCLUDED_ARCHS[sdk=iphonesimulator*]'=>'i386,arm64','VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }

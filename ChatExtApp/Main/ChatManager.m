@@ -381,7 +381,7 @@ static BOOL isSDKInited = NO;
                     NSDictionary* ext = customBody.customExt;
                     NSString* avatarUrl = [ext objectForKey:kAvatarUrl];
                     if(avatarUrl.length == 0){
-                        NSDictionary* curExt = customBody.ext;
+                        NSDictionary* curExt = msg.ext;
                         avatarUrl = [curExt objectForKey:kAvatarUrl];
                     }
                     NSString* des = [ext objectForKey:@"des"];
